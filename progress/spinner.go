@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 )
 
 // BuilderFunc build char string

@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 	"github.com/goofy/goutil/strutil"
 )
 

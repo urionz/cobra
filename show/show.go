@@ -7,7 +7,7 @@ import (
 	"io"
 	"text/tabwriter"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 )
 
 // Error tips message print

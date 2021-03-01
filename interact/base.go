@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 )
 
 const (

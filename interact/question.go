@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 )
 
 // Question definition

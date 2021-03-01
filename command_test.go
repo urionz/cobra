@@ -10,6 +10,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/urionz/color"
 	"github.com/urionz/pflag"
 )
 
@@ -1156,7 +1157,7 @@ func TestSuggestions(t *testing.T) {
 	}
 	rootCmd.AddCommand(timesCmd)
 
-	templateWithSuggestions := "Error: unknown command \"%s\" for \"root\"\n\nDid you mean this?\n\t%s\n\nRun 'root --help' for usage.\n"
+	templateWithSuggestions := "Error: unknown command \"%s\" for \"root\"\n\nDid you mean this?\n\t<info>%s</>\n\nRun 'root --help' for usage.\n"
 	templateWithoutSuggestions := "Error: unknown command \"%s\" for \"root\"\nRun 'root --help' for usage.\n"
 
 	tests := map[string]string{
@@ -1182,9 +1183,9 @@ func TestSuggestions(t *testing.T) {
 			output, _ := executeCommand(rootCmd, typo)
 
 			if suggestion == "" || suggestionsDisabled {
-				expected = fmt.Sprintf(templateWithoutSuggestions, typo)
+				expected = color.String(fmt.Sprintf(templateWithoutSuggestions, typo))
 			} else {
-				expected = fmt.Sprintf(templateWithSuggestions, typo, suggestion)
+				expected = color.String(fmt.Sprintf(templateWithSuggestions, typo, suggestion))
 			}
 
 			if output != expected {

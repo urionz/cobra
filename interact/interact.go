@@ -1,6 +1,6 @@
 package interact
 
-import "github.com/goofy/color"
+import "github.com/urionz/color"
 
 // Interactive definition
 type Interactive struct {

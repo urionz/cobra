@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"os"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 	"github.com/goofy/goutil/strutil"
 )
 

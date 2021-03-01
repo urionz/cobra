@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 	"github.com/goofy/cli/interact"
 )
 

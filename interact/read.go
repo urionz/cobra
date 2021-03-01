@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 	"github.com/goofy/goutil/cliutil"
 	"github.com/goofy/goutil/envutil"
 )

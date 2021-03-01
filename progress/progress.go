@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 )
 
 // use for match like "{@bar}" "{@percent:3s}"

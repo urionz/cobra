@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"unicode/utf8"
 
-	"github.com/goofy/color"
+	"github.com/urionz/color"
 )
 
 const (
