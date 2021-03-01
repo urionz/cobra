@@ -25,7 +25,8 @@ import (
 	"sort"
 	"strings"
 
-	flag "github.com/spf13/pflag"
+	"github.com/urionz/color"
+	flag "github.com/urionz/pflag"
 )
 
 // FParseErrWhitelist configures Flag parse errors to be ignored
@@ -487,30 +488,30 @@ func (c *Command) UsageTemplate() string {
 	if c.HasParent() {
 		return c.parent.UsageTemplate()
 	}
-	return `Usage:{{if .Runnable}}
+	return color.String(`<comment>Usage:</>{{if .Runnable}}
   {{.UseLine}}{{end}}{{if .HasAvailableSubCommands}}
-  {{.CommandPath}} [command]{{end}}{{if gt (len .Aliases) 0}}
+  {{.CommandPath}} [Global Flags...] <info>{command}</> [--flags ...] [argument ...]{{end}}{{if gt (len .Aliases) 0}}
 
-Aliases:
+<comment>Aliases:</>
   {{.NameAndAliases}}{{end}}{{if .HasExample}}
 
-Examples:
+<comment>Examples:</>
 {{.Example}}{{end}}{{if .HasAvailableSubCommands}}
 
-Available Commands:{{range .Commands}}{{if (or .IsAvailableCommand (eq .Name "help"))}}
-  {{rpad .Name .NamePadding }} {{.Short}}{{end}}{{end}}{{end}}{{if .HasAvailableLocalFlags}}
+<comment>Available Commands:</>{{range .Commands}}{{if (or .IsAvailableCommand (eq .Name "help"))}}
+  <info>{{rpad .Name .NamePadding }}</> {{.Short}}{{end}}{{end}}{{end}}{{if .HasAvailableLocalFlags}}
 
-Flags:
+<comment>Flags:</>
 {{.LocalFlags.FlagUsages | trimTrailingWhitespaces}}{{end}}{{if .HasAvailableInheritedFlags}}
 
-Global Flags:
+<comment>Global Flags:</>
 {{.InheritedFlags.FlagUsages | trimTrailingWhitespaces}}{{end}}{{if .HasHelpSubCommands}}
 
 Additional help topics:{{range .Commands}}{{if .IsAdditionalHelpTopicCommand}}
   {{rpad .CommandPath .CommandPathPadding}} {{.Short}}{{end}}{{end}}{{end}}{{if .HasAvailableSubCommands}}
 
 Use "{{.CommandPath}} [command] --help" for more information about a command.{{end}}
-`
+`)
 }
 
 // HelpTemplate return help template for the command.
@@ -654,10 +655,10 @@ func (c *Command) findSuggestions(arg string) string {
 	if suggestions := c.SuggestionsFor(arg); len(suggestions) > 0 {
 		suggestionsString += "\n\nDid you mean this?\n"
 		for _, s := range suggestions {
-			suggestionsString += fmt.Sprintf("\t%v\n", s)
+			suggestionsString += fmt.Sprintf("\t<info>%v</>\n", s)
 		}
 	}
-	return suggestionsString
+	return color.String(suggestionsString)
 }
 
 func (c *Command) findNext(next string) *Command {
