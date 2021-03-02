@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/urionz/color"
-	"github.com/goofy/goutil/strutil"
+	"github.com/urionz/goutil/strutil"
 )
 
 // ListOption definition

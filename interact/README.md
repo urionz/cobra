@@ -24,7 +24,7 @@ import (
 	"os/exec"
 
 	"github.com/urionz/color"
-	"github.com/goofy/cli/interact"
+	"github.com/urionz/cli/interact"
 )
 
 func main() {

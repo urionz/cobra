@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/urionz/color"
-	"github.com/goofy/goutil/cliutil"
-	"github.com/goofy/goutil/envutil"
+	"github.com/urionz/goutil/cliutil"
+	"github.com/urionz/goutil/envutil"
 )
 
 // ReadInput read user input form Stdin

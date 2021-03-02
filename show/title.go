@@ -1,6 +1,6 @@
 package show
 
-import "github.com/goofy/cli/show/symbols"
+import "github.com/urionz/cli/show/symbols"
 
 // some constants
 const (

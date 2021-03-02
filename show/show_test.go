@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/goofy/cli/show"
+	"github.com/urionz/cli/show"
 	"github.com/stretchr/testify/assert"
 )
 

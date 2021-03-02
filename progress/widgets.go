@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/goofy/goutil/fmtutil"
+	"github.com/urionz/goutil/fmtutil"
 )
 
 var builtinWidgets = map[string]WidgetFunc{

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/urionz/color"
-	"github.com/goofy/goutil/strutil"
+	"github.com/urionz/goutil/strutil"
 )
 
 // Select definition
