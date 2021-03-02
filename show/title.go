@@ -1,6 +1,6 @@
 package show
 
-import "github.com/urionz/cli/show/symbols"
+import "github.com/urionz/cobra/show/symbols"
 
 // some constants
 const (

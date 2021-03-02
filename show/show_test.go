@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/urionz/cli/show"
 	"github.com/stretchr/testify/assert"
+	"github.com/urionz/cobra/show"
 )
 
 func TestList(t *testing.T) {
